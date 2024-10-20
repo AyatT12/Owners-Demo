@@ -530,3 +530,23 @@ font-weight: 600;
         font-size: .8rem;
     }
 }
+.bars-button #sidebarToggleTop{
+    position: fixed;
+    z-index: 999;
+    background: #e7efedb0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.collapse{
+    width: 100%;
+}
+.sidebar-blocks{
+    justify-content: space-between;
+}
+@media(max-width :767px){
+   .sidebar > div{
+    justify-content: space-evenly !important;
+   }
+}
