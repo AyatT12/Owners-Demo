@@ -543,11 +543,11 @@ font-weight: 600;
     width: 100%;
 }
 .sidebar-blocks{
-    justify-content: space-between;
+    justify-content: flex;
 }
 @media(max-width :767px){
    .sidebar > div{
-    justify-content: space-evenly !important;
+    justify-content: flex-start !important;
    }
    .sidebar{
     overflow-y: scroll;
