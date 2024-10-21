@@ -542,8 +542,8 @@ font-weight: 600;
 .collapse{
     width: 100%;
 }
-.sidebar-blocks{
-    justify-content: flex;
+.sidebar-blocks {
+    justify-content: space-between;
 }
 @media(max-width :767px){
    .sidebar > div{
