@@ -459,8 +459,8 @@
                                     </table>
                                     <div  id="contentContainer" style="display:none;"></div>
                                 </div>
-                            </div>
-
+                            </div> 
+                          
                         </div>
                         <div class="col-xl-6">
                             <div class="table-card bg-white pt-3">
@@ -477,14 +477,22 @@
                                         <tbody>
                                             <tr data-content="data1">
                                                 <td>
-                                                    <div class="d-flex gap-2 align-items-center">
+                                                    <div class="d-flex align-items-center">
                                                         <div class="col">
+                                                            <div class="container-fluid">
                                                             <p class="FirstLineP"> بدر ريان مشاري الشريم </p>
                                                             <p class="secondLineP"> مدير عام </p>
-                                                            <div class="d-flex justify-content-end gap-4">
-                                                                <p class="secondLineP">22/09/2024</p>
-                                                                <p class="secondLineP time"> 11:30 pm</p>
-                                                            </div>
+                                                                <div class="row justify-content-end ">
+                                                                <div class="col-sm-6">
+                                                                    <p class="secondLineP">22/09/2024</p>
+
+                                                                </div>
+                                                                <div class="col-sm-auto">
+                                                                    <p class="secondLineP time"> 11:30 pm</p>
+
+                                                                </div>                                                            
+                                                              </div>
+                                                          </div>
                                                         </div>
                                                         <div class="col-auto d-flex justify-content-end gap-1">
                                                             <div class="employee">
@@ -504,14 +512,23 @@
                                             </tr>
                                             <tr data-content="data2">
                                                 <td>
-                                                    <div class="d-flex gap-2 align-items-center">
+                                                    <div class="d-flex align-items-center">
                                                         <div class="col">
+                                                            <div class="container-fluid">
+
                                                             <p class="FirstLineP"> عمار عبدالغفور مسفر السبيعي </p>
                                                             <p class="secondLineP"> مدير الشئون المالية </p>
-                                                            <div class="d-flex justify-content-end gap-4">
-                                                                <p class="secondLineP">22/09/2024</p>
-                                                                <p class="secondLineP time"> 11:30 pm</p>
+                                                                <div class="row justify-content-end ">
+                                                                <div class="col-sm-6">
+                                                                    <p class="secondLineP">22/09/2024</p>
+
+                                                                </div>
+                                                                <div class="col-sm-auto">
+                                                                    <p class="secondLineP time"> 11:30 pm</p>
+
+                                                                </div>                                                            
                                                             </div>
+                                                           </div>
                                                         </div>
                                                         <div class="col-auto d-flex justify-content-end gap-1">
                                                             <div class="employee">
@@ -531,13 +548,21 @@
                                             </tr>
                                             <tr data-content="data3">
                                                 <td>
-                                                    <div class="d-flex gap-2 align-items-center">
+                                                    <div class="d-flex align-items-center">
                                                         <div class="col">
+                                                            <div class="container-fluid">
                                                             <p class="FirstLineP"> عبدالخالق يعقوب أنس إسماعيل</p>
                                                             <p class="secondLineP"> مدير أسطول السيارات</p>
-                                                            <div class="d-flex justify-content-end gap-4">
-                                                                <p class="secondLineP">22/09/2024</p>
-                                                                <p class="secondLineP time"> 11:30 pm</p>
+                                                                <div class="row justify-content-end ">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="secondLineP">22/09/2024</p>
+    
+                                                                    </div>
+                                                                    <div class="col-sm-auto">
+                                                                        <p class="secondLineP time"> 11:30 pm</p>
+    
+                                                                    </div>                                                            
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-auto d-flex justify-content-end gap-1">
@@ -691,12 +716,12 @@
 
                 let newContent = '';
                 if (dataKey === 'data1') {
-                    newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608955.svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-success"></div></div></div><div class="col"><p class="FirstLineP"> بدر ريان مشاري الشريم </p><div class="d-flex gap-3"><p class="secondLineP"> مدير عام </p><div class="d-flex gap-1"><p class="secondLineP time"> 11:30pm</p><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
+                     newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608955.svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-success"></div></div></div><div class="col"><div class="container-fluid"><p class="FirstLineP" style="color: #39629c;font-size: 1.1rem;"> بدر ريان مشاري الشريم </p><div class="row"><div class="col-auto"><p class="secondLineP"> مدير عام </p></div><div class="col-sm-auto"><p class="secondLineP time"> 11:30pm</p></div><div class="col-sm-6 p-md-0"><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
                 } else if (dataKey === 'data2') {
-                    newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608948.svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-success"></div></div></div><div class="col"><p class="FirstLineP"> عمار عبدالغفور مسفر السبيعي</p><div class="d-flex gap-3"><p class="secondLineP"> مدير عام </p><div class="d-flex gap-1"><p class="secondLineP time"> 11:30pm</p><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
+                    newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608948.svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-success"></div></div></div><div class="col"><div class="container-fluid"><p class="FirstLineP" style="color: #39629c;font-size: 1.1rem;">  عمار عبدالغفور مسفر السبيعي   </p><div class="row"><div class="col-auto"><p class="secondLineP">  مدير الشئون المالية </p></div><div class="col-sm-auto"><p class="secondLineP time"> 11:30pm</p></div><div class="col-sm-6 p-md-0"><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
 
                 } else if (dataKey === 'data3') {
-                    newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608948 (2).svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-danger"></div></div></div><div class="col"><p class="FirstLineP"> عبدالخالق يعقوب أنس إسماعيل</p><div class="d-flex gap-3"><p class="secondLineP"> مدير عام </p><div class="d-flex gap-1"><p class="secondLineP time"> 11:30pm</p><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
+                    newContent = '<div class="row mx-1"><div class="col d-flex gap-2 align-items-center"><div class="col-auto d-flex justify-content-end gap-1"><img src="img/Frame 2608948 (2).svg"><div class="employee"><img src="img/pic (3).svg" alt="employee-photo" class="employee border-0 w-100 h-100"><div class="active_statue bg-danger"></div></div></div><div class="col"><div class="container-fluid"><p class="FirstLineP" style="color: #39629c;font-size: 1.1rem;">  عبدالخالق يعقوب أنس إسماعيل  </p><div class="row"><div class="col-auto"><p class="secondLineP">  مدير أسطول السيارات</p></div><div class="col-sm-auto"><p class="secondLineP time"> 11:30pm</p></div><div class="col-sm-6 p-md-0"><p class="secondLineP">22/09/2024</p></div></div></div></div><div class="col-auto"><img id="backButton2" style="cursor:pointer;" onclick="goBack2()" src="img/back icon.svg"></div></div><div class="row mx-1 g-2 mt-2"><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>العقود</span></div><div class="col-sm-6 data-icon"><span class="data-card">200</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>مغلقة</span> <span>51</span></div></div><div class="row mt-2"><div class="col data-card2"><span>قائمة</span> <span>70</span></div></div></div></div></div><div class="col-lg-6"><div class="card border-left-primary h-100 py-2"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col-sm-6 data-card"><span>الرصيد</span></div><div class="col-sm-6 data-icon"><span class="data-card">1,235,879.02</span></div></div><hr class="card-hr"><div class="row"><div class="col data-card2"><span>متاح</span> <span>120,865</span></div></div><div class="row mt-2"><div class="col data-card2"><span>محجوز</span> <span>1,115,014.02</span></div></div></div></div></div></div>'
 
                 }
 
