@@ -22,7 +22,7 @@ body {
     text-align: left ;
 }
 .sidebar-dark #sidebarToggle {
-    right: -16px;
+    right:2px;
     left: 0;
 }
 
@@ -35,20 +35,7 @@ body {
     padding: 0px;
 }
 
-.sidebar .nav-item .nav-link[data-bs-toggle=collapse].collapsed::after {
-    content: '\f105';
-}
 
-.sidebar .nav-item .nav-link[data-bs-toggle=collapse]::after {
-    width: 1rem;
-    text-align: center;
-    float: right;
-    vertical-align: 0;
-    border: 0;
-    font-weight: 900;
-    content: '\f107';
-    font-family: 'Font Awesome 5 Free';
-}
 .rate-data{
     display: flex;
     flex-direction: row-reverse;
@@ -98,20 +85,7 @@ body {
     }
 }
 
-@media (min-width: 768px) {
-    .sidebar.toggled .nav-item .collapse {
-        position: absolute;
-        right: calc(-8rem + 1.5rem / 2);
-        z-index: 10;
-        top: 2px;
-        -webkit-animation-name: growIn;
-        animation-name: growIn;
-        -webkit-animation-duration: .2s;
-        animation-duration: .2s;
-        -webkit-animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
-        animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
-    }
-}
+
 @media (max-width: 765px) {
     .sidebar.toggled {
         transform: translateX(-100%) !important;
