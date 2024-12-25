@@ -647,7 +647,7 @@ body {
     }
 }
 
-@media(min-width :993px) {
+@media(min-width :767px) {
 
     .bars-button,
     #sidebarToggleTop {
@@ -658,3 +658,10 @@ body {
         display: inline;
     }
 }
+
+/* loader */
+.tables-row{
+    position: relative;
+    min-height: 450px;
+}
+
