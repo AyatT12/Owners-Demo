@@ -94,8 +94,6 @@
                             </div>
                         </a>
                     </div>
-
-
                     <!-- Nav Item - Dashboard -->
                     <li class="nav-item active mt-5">
                         <a class="nav-link" href="index.html">
@@ -118,11 +116,6 @@
                             </div>
                         </div>
                     </li>
-
-
-
-
-
                     <!-- Sidebar Toggler (Sidebar) -->
                     <div class="text-center  sidebarToggleDiv">
                         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -302,19 +295,25 @@
                     <!-- Content Row -->
 
                     <div class="row mb-3 g-3">
-                        <div class="col-xl-4">
+                        <div class="col-xxl-6">
                             <div class="card charts-card">
                                 <!-- Card Body -->
                                 <div class="card-body ">
                                     <h5> الرصيد</h5>
-                                    <div class="row align-items-center chart-area mx-1 px-2">
-                                        <canvas id="barChart" style="max-height: 10rem;"></canvas>
-
+                                    <div class="row align-items-center justify-content-between  chart-area ">
+                                        <div class="col-auto" style="font-size:13px ;color: #333;">
+                                            <p>إجمالي الرصيد : 22,395,259.40</p>
+                                             <p>الرصيد المتاح : 11,091,755.40</p>
+                                              <p> الرصيد المحجوز : 11,303,504.00</p>
+                                         </div>
+                                        <div class="col-lg-8 col-xxl-7">
+                                            <canvas id="barChart" style="max-height: 10rem;"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-4">
+                        <div class="col-lg-6 col-xxl-3">
                             <div class="card charts-card">
                                 <!-- Card Body -->
                                 <div class="card-body ">
@@ -325,20 +324,20 @@
                                                 <span class="chart-label">دائنون</span>
                                             </div>
                                         </div>
-
+                    
                                         <div class="col-lg-6">
                                             <div class="chart-pie2" id="chart-debtors">
                                                 <span class="chart-label">مدينون</span>
                                             </div>
                                         </div>
-
+                    
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Pie Chart -->
-                        <div class="col-lg-6 col-xl-4">
+                        <div class="col-lg-6 col-xxl-3">
                             <div class="card charts-card">
 
                                 <!-- Card Body -->
@@ -360,7 +359,7 @@
 
                     </div>
                     <div class="row tables-row g-3 mb-3">
-<!--                         <div class="loaderbac">
+                        <!-- <div class="loaderbac">
                             <span class="loader"></span>
                         </div> -->
                         <div class="col-lg-12 col-xl-6">
@@ -505,7 +504,9 @@
                                                                     class="employee border-0 w-100 h-100">
                                                                 <div class="active_statue bg-success"></div>
                                                             </div>
-                                                            <img src="img/Frame 2608955.svg">
+                                                            <div class="arrows">
+                                                                <img src="img/Frame 2608955.svg">
+                                                            </div>
 
                                                         </div>
 
@@ -541,8 +542,9 @@
                                                                     class="employee border-0 w-100 h-100">
                                                                 <div class="active_statue bg-success"></div>
                                                             </div>
-                                                            <img src="img/Frame 2608948.svg">
-
+                                                              <div class="arrows">
+                                                               <img src="img/Frame 2608948.svg">
+                                                              </div>
                                                         </div>
 
                                                     </div>
@@ -576,8 +578,7 @@
                                                                     class="employee border-0 w-100 h-100">
                                                                 <div class="active_statue bg-danger"></div>
                                                             </div>
-                                                            <img src="img/Frame 2608948 (2).svg">
-
+                                                            <div class="arrows"></div>
                                                         </div>
 
                                                     </div>
