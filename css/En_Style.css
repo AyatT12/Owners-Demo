@@ -76,16 +76,11 @@ body {
     right: auto;
     left: 0px;
 }
-@media (max-width:768px) {
-    .sidebar .nav-item .collapse {
-        position: absolute;
-        right: calc(4rem + 1.5rem / 2);
-        z-index: 1;
-        top: 50px;
-    }
+
+#backButton2 , #backButton{
+    transform: rotate(180deg)
+
 }
-
-
 @media (max-width: 765px) {
     .sidebar.toggled {
         transform: translateX(-100%) !important;

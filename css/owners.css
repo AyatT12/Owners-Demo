@@ -665,3 +665,8 @@ body {
     min-height: 450px;
 }
 
+
+/* arrow */
+.arrows{
+    min-width: 22px;
+}
