@@ -2,7 +2,7 @@
 // Pie Chart contracts
 const pieChartEl = document.getElementById('myPieChart');
 const pieChartData = {
-  labels: ['منتهيه',' تنتهي اليوم',  ' تنتهي غدا', 'تنتهي لاحقا'],
+  labels: ['منتهيه', 'غدا', 'اليوم' , 'لاحقا'],
   datasets: [{
     data: [342, 313, 245, 210],
     backgroundColor: [ 'rgba(255, 64, 105, .9)','rgba(255, 159, 64, .9)', 'rgba(153, 102, 255,.9 )','rgba(54, 162, 235, .9)'],
@@ -45,20 +45,24 @@ const pieChart = new Chart(pieChartEl, {
 
 // دائنون
 var palette = anychart.palettes.distinctColors();
-var percentage = 35.58; 
+var percentage = 21498.25;  
+
 var label = anychart.standalones.label();
 label
   .useHtml(true)
   .text(
-    '<span style = "color: #313136; font-weight:600 ; font-family: "Cairo", sans-serif;">' + percentage + '%</span>'
+    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' + 
+    percentage.toLocaleString('en-US') + 
+    '</span>'
   )
   .position('center')
   .anchor('center')
   .hAlign('center')
   .vAlign('middle');
+
 var data = anychart.data.set([
   ['فورد', percentage],
-  [' اخري', 100 - percentage]
+  ['اخري', 30498 - percentage]  
 ]);
 
 palette.items([
@@ -66,25 +70,27 @@ palette.items([
   { color: '#E6E6E6' },
 ]);
 
-var chart = anychart.pie(data)
+var chart = anychart.pie(data);
 chart.palette(palette);
 chart.innerRadius('70%');
 chart.container('chart-creditor');
 chart.legend(false);
-chart.labels(false)
-chart.tooltip(false)
+chart.labels(false);
+chart.tooltip(false);
 chart.center().content(label);
 chart.draw();
 
 // مدينون
 
 var palette = anychart.palettes.distinctColors();
-var percentage = 64.48; 
+var percentage = 186.07; 
 var label = anychart.standalones.label();
 label
-  .useHtml(true)
-  .text(
-    '<span style = "color: #313136; font-weight:600 ; font-family: "Cairo", sans-serif;">' + percentage + '%</span>'
+ .useHtml(true)
+ .text(
+    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' + 
+    percentage.toLocaleString('en-US') + 
+    '</span>'
   )
   .position('center')
   .anchor('center')
@@ -92,7 +98,7 @@ label
   .vAlign('middle');
 var data = anychart.data.set([
   ['فورد', percentage],
-  [' اخري', 100 - percentage]
+  [' اخري', 1500 - percentage]
 ]);
 
 palette.items([

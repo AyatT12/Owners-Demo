@@ -3,7 +3,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 35.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['أقل من 300', percentage],
+  ['الثلاثاء', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -29,7 +29,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 20.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['301 - 500 ', percentage],
+  ['الأحد', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -56,7 +56,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 15.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['1001 - 1500', percentage],
+  ['الأربعاء', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -84,7 +84,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 35.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['5 - 6', percentage],
+  ['21:00 - 23:59', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -110,7 +110,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 20.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['8 - 10', percentage],
+  ['18:00 - 20:59', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -136,7 +136,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 15.5; // Define the percentage value
 
 var data = anychart.data.set([
-  [' 12 - 20', percentage],
+  ['09:00 - 11:59', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -163,7 +163,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 35.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['130 كم', percentage],
+  ['30 أكثر من', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -189,7 +189,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 20.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['167 كم', percentage],
+  ['4 - 7', percentage],
   [' اخري', 100 - percentage]
 ]);
 
@@ -215,7 +215,7 @@ var palette = anychart.palettes.distinctColors();
 var percentage = 15.5; // Define the percentage value
 
 var data = anychart.data.set([
-  ['90 كم  ', percentage],
+  ['11 - 15', percentage],
   [' اخري', 100 - percentage]
 ]);
 
