@@ -77,6 +77,7 @@ body {
 
 .company-logo {
     width: 150px;
+    padding: 0px 10px;
 }
 
 .company_name {
@@ -669,4 +670,10 @@ body {
 /* arrow */
 .arrows{
     min-width: 22px;
+}
+
+@media (max-width : 1200px) {
+    .data-card-number{
+        font-size: 14px;
+    }
 }
