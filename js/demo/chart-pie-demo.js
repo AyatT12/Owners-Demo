@@ -119,10 +119,16 @@ chart.draw();
 // 
 
 // Bar Chart 
+
 var myChart;
 
 function createBarChart() {
-  var barChart = document.getElementById("barChart").getContext("2d");
+  var chartContainer = document.getElementById("barChart").parentElement;
+  var canvas = document.getElementById("barChart");
+  
+  chartContainer.style.opacity = '0';
+  
+  var barChart = canvas.getContext("2d");
   
   if (myChart) {
     myChart.destroy();
@@ -148,7 +154,12 @@ function createBarChart() {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false, 
+      maintainAspectRatio: false,
+      animation: {
+        onComplete: function() {
+          chartContainer.style.opacity = '1';
+        }
+      },
       plugins: {
         legend: {
           display: false
@@ -183,11 +194,17 @@ function createBarChart() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', createBarChart);
+document.addEventListener('DOMContentLoaded', function() {
+  createBarChart();
+});
 
 window.addEventListener('resize', function() {
+  var chartContainer = document.getElementById("barChart").parentElement;
+  chartContainer.style.transition = 'opacity 0.1s ease-in-out';
+  chartContainer.style.opacity = '0';
+  
   clearTimeout(window.resizingTimer);
   window.resizingTimer = setTimeout(function() {
     createBarChart();
-  }, 200);
+  }, 20);
 });
