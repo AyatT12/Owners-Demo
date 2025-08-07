@@ -353,7 +353,7 @@ progress {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:px) {
     .navbar-expand-xl {
         flex-flow: row nowrap;
         justify-content: flex-start
@@ -1859,7 +1859,7 @@ a:focus {
     height: 100%;
 }
 
-@media (min-width:1200px) {
+@media (min-width:1400px) {
     .chart-area {
         height: 11rem
     }
