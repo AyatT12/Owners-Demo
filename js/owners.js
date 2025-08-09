@@ -79,9 +79,9 @@ checkbox.addEventListener('change', function() {
   const isChecked = checkbox.checked;
   setCustomCSS(isChecked);
   if (isChecked) {
-    label2.innerHTML = '  AR <i class="fa-solid fa-globe lang_globe"></i> ';
+    label2.innerHTML = '  العربية <i class="fa-solid fa-globe lang_globe"></i> ';
   } else {
-    label2.innerHTML = '  <i class="fa-solid fa-globe lang_globe"></i> EN';
+    label2.innerHTML = '  <i class="fa-solid fa-globe lang_globe"></i> English ';
   }
 });
 
@@ -99,7 +99,7 @@ const isChecked = localStorage.getItem('customCSS') === 'true';
 checkbox.checked = isChecked;
 setCustomCSS(isChecked);
 if (isChecked) {
-  label2.innerHTML = '  AR <i class="fa-solid fa-globe lang_globe"></i>';
+  label2.innerHTML = '  العربية <i class="fa-solid fa-globe lang_globe"></i>';
 }
 window.addEventListener('DOMContentLoaded', function() {
   const customCSS = localStorage.getItem('customCSS') === 'true';
