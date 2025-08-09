@@ -30,30 +30,28 @@
             height: 11rem !important;
             overflow: hidden;
         }
-        
+
         @media (max-width: 768px) {
             .chart-container {
                 height: 250px !important;
             }
-            
+
             .chart-area {
                 flex-direction: column !important;
             }
-            
+
             .chart-area .col-md-auto {
                 margin-bottom: 15px;
                 text-align: center;
             }
         }
-        
+
         @media (min-width: 768px) and (max-width: 1399px) {
             .chart-container {
                 height: 280px !important;
             }
         }
-        
-      
-        </style>
+    </style>
 
 </head>
 
@@ -63,41 +61,43 @@
 
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav  sidebar sidebar-dark accordion " id="accordionSidebar">
-
-            <div class="d-flex flex-column sidebar-blocks h-100 ">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+            <div class="row mt-3 mb-2 mx-1 align-items-center justify-content-end">
+                <div class="col sidebarToggleDiv">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+                <div class="col-auto">
+                    <input type="checkbox" id="myCheckbox" class="d-none">
+                    <label for="myCheckbox" class="lang-button" id="checkboxLabel">
+                        <i class="fa-solid fa-globe lang_globe"></i> English
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex flex-column sidebar-blocks">
                 <div>
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn rounded-circle ">
+                    <button id="sidebarToggleTop" class="btn rounded-circle closeBtn">
                         <i class="fa-solid fa-xmark fa-1x toggleButton"></i>
                     </button>
-                    <!-- Sidebar -  -->
-                    <div class="col lang-button-col">
-                        <input type="checkbox" id="myCheckbox" class="d-none">
-                        <label for="myCheckbox" class="lang-button m-2" id="checkboxLabel"> <i
-                                class="fa-solid fa-globe lang_globe"></i> EN </label>
-                    </div>
 
-                    <a class="sidebar-brand d-flex align-items-center justify-content-center" style="margin-top: 15rem;"
-                        href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
+                    <!-- User Profile Section -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" id="userDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="row flex-column align-items-center">
-                            <div class="col-12 d-flex align-items-center justify-content-center ">
+                            <div class="col-12 d-flex align-items-center justify-content-center">
                                 <div class="Profile">
-                                    <img src="img/pic (3).svg" alt="Profile photo" class="user-photo ">
+                                    <img src="img/pic (3).svg" alt="Profile photo" class="user-photo">
                                 </div>
                             </div>
-                            <div class=" sidebar-brand-text col-12  mb-5  mt-3">
-                                <h6 class="user_name wow fadeInDown" data-wow-delay=".5s"> عيسي هاني مبروك عزام
-
-                                </h6>
-                                <p class="wow fadeInDown" data-wow-delay=".5s"> مشرف علي الفروع
-                                </p>
+                            <div class="sidebar-brand-text col-12">
+                                <h6 class="user_name wow fadeInDown" data-wow-delay=".5s">عيسي هاني مبروك عزام</h6>
+                                <p class="wow fadeInDown" data-wow-delay=".5s">مشرف علي الفروع</p>
                             </div>
                         </div>
                     </a>
+
                     <!-- Dropdown - User Information -->
-                    <div class="dropdown-menu dropdown-menu-right shadow  user-dropdown" aria-labelledby="userDropdown">
+                    <div class="dropdown-menu dropdown-menu-right shadow user-dropdown" aria-labelledby="userDropdown">
                         <p class="welcome-Message">مرحبًا عيسي هاني مبروك</p>
                         <a class="dropdown-item" href="https://ayatt12.github.io/test-page/">
                             <div class="row">
@@ -105,8 +105,7 @@
                                     <img src="img/Frame (7).svg">
                                 </div>
                                 <div class="col">
-                                    <p> الأنظمة
-                                    </p>
+                                    <p>الأنظمة</p>
                                 </div>
                             </div>
                         </a>
@@ -116,56 +115,49 @@
                                     <img src="img/Frame (8).svg">
                                 </div>
                                 <div class="col">
-                                    <p>
-                                        تسجيل الخروج
-
-                                    </p>
+                                    <p>تسجيل الخروج</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <!-- Nav Item - Dashboard -->
-                    <li class="nav-item active mt-5">
+
+                    <!-- Navigation Items -->
+                    <li class="nav-item active">
                         <a class="nav-link" href="index.html">
                             <span>لوحة التحكم</span>
                         </a>
                     </li>
-                    <!-- Heading -->
+
                     <li class="nav-item">
-                        <a class="nav-link pt-4 pb-0" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                            <span style="color: #39629c;"> مؤشرات العقود </span>
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUtilities"
+                            aria-expanded="true" aria-controls="collapseUtilities">
+                            <span style="color: #39629c;">مؤشرات العقود</span>
                         </a>
                         <div class="collapse show">
                             <div class="bg-white py-2 collapse-inner rounded">
-                                <a class="collapse-item" href="tenant.html"> المستـأجرين <img
+                                <a class="collapse-item" href="tenant.html">المستـأجرين <img
                                         src="img/Frame (6).svg"></a>
-                                <a class="collapse-item" href="Contracts.html"> العقود <img src="img/Frame (5).svg"></a>
-                                <a class="collapse-item" href="Cars.html"> السيارات <img src="img/Frame (4).svg"> </a>
-
+                                <a class="collapse-item" href="Contracts.html">العقود <img src="img/Frame (5).svg"></a>
+                                <a class="collapse-item" href="Cars.html">السيارات <img src="img/Frame (4).svg"></a>
                             </div>
                         </div>
                     </li>
-                    <!-- Sidebar Toggler (Sidebar) -->
-                    <div class="text-center  sidebarToggleDiv">
-                        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                    </div>
-
                 </div>
+
+                <!-- Company Logo Section -->
                 <div>
-                    <div class="row flex-column align-items-center justify-content-center mb-lg-5">
-                        <div class="col-12 d-flex align-items-center justify-content-center ">
+                    <div class="row flex-column align-items-center justify-content-center">
+                        <div class="col-12 d-flex align-items-center justify-content-center">
                             <div class="Profile company-logo" style="width: auto;">
-                                <img src="./حبل اللوز.png" alt="company logo" class="mb-3" style="height: 60px;">
+                                <img src="./حبل اللوز.png" alt="company logo" class="mb-2" style="height: 60px;">
                             </div>
                         </div>
                         <div class="sidebar-brand-text col-12 text-center">
-                            <h6 class="company_name "> شركة جبل اللوز لتأجير السيارات </h6>
+                            <h6 class="company_name">شركة جبل اللوز لتأجير السيارات</h6>
                         </div>
                     </div>
                 </div>
             </div>
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -346,8 +338,10 @@
                                         </div>
                                         <div class="col flex-shrink-1" style="min-width: 0;">
 
-                                            <div class="chart-container" style="position: relative; width: 100%; height: 11rem;">
-                                                <canvas id="barChart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                            <div class="chart-container"
+                                                style="position: relative; width: 100%; height: 11rem;">
+                                                <canvas id="barChart"
+                                                    style="display: block; width: 100%; height: 100%;"></canvas>
                                             </div>
                                         </div>
                                     </div>
@@ -410,12 +404,7 @@
                                 <div class="scrollTable">
                                     <h5 id="Branches-card-title"> الفروع </h5>
                                     <table class="spacing-table  table-borderless" id="Branches-data">
-                                        <thead class="sticky-top pb-1">
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
+                                       
 
                                         <tbody>
                                             <tr data-content="data1">
@@ -514,12 +503,7 @@
                                 <div class="scrollTable">
                                     <h5 id="employee-card-title"> الموظفين </h5>
                                     <table class="spacing-table  table-borderless" id="employee-data">
-                                        <thead class="sticky-top pb-1">
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
+                                       
 
                                         <tbody>
                                             <tr data-content="data1">
@@ -656,25 +640,7 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
         <!-- wow.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
