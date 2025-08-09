@@ -156,8 +156,8 @@ function createBarChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, // مهم جداً للأجهزة المحمولة
-            devicePixelRatio: window.devicePixelRatio || 1, // لدعم الشاشات عالية الدقة
+            maintainAspectRatio: false, 
+            devicePixelRatio: window.devicePixelRatio || 1, 
             animation: {
                 onComplete: function() {
                     // إعادة إظهار الرسم
@@ -210,22 +210,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
 });
 
-let resizeTimeout;
-window.addEventListener('resize', function() {
-    var chartContainer = document.getElementById("barChart").parentElement;
-    if (chartContainer) {
-        chartContainer.style.transition = 'opacity 0.2s ease-in-out';
-        chartContainer.style.opacity = '0';
-    }
-    
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function() {
-        createBarChart();
-    }, 300);
-});
-
-window.addEventListener('orientationchange', function() {
-    setTimeout(() => {
-        createBarChart();
-    }, 500);
-});
