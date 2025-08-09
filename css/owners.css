@@ -617,7 +617,7 @@ body {
 
 .sidebar-blocks {
     justify-content: space-around;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
 }
 
 .sidebarToggleDiv {
@@ -665,4 +665,10 @@ body {
     .data-card-number {
         font-size: 14px;
     }
+}
+@media (max-width:1024px) {
+    .sidebar-blocks {
+        justify-content: space-around;
+        height: calc(100vh - 100px);
+    }    
 }
