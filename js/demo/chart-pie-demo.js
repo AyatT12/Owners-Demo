@@ -1,29 +1,18 @@
 // //////////////////////////////////////////////////  الرئيسية /////////////////////////////////////////////////////////////////////////
 // Pie Chart contracts
-const pieChartEl = document.getElementById("myPieChart");
+const pieChartEl = document.getElementById('myPieChart');
 const pieChartData = {
-  labels: ["منتهيه", "غدا", "اليوم", "لاحقا"],
-  datasets: [
-    {
-      data: [342, 313, 245, 210],
-      backgroundColor: [
-        "rgba(255, 64, 105, .9)",
-        "rgba(255, 159, 64, .9)",
-        "rgba(153, 102, 255,.9 )",
-        "rgba(54, 162, 235, .9)",
-      ],
-      borderColor: [
-        "rgba(255, 64, 105, .9)",
-        "rgba(255, 159, 64, .9)",
-        "rgba(153, 102, 255,.9 )",
-        "rgba(54, 162, 235, .9)",
-      ],
-    },
-  ],
+  labels: ['منتهيه', 'غدا', 'اليوم' , 'لاحقا'],
+  datasets: [{
+    data: [342, 313, 245, 210],
+    backgroundColor: [ 'rgba(255, 64, 105, .9)','rgba(255, 159, 64, .9)', 'rgba(153, 102, 255,.9 )','rgba(54, 162, 235, .9)'],
+    borderColor: ['rgba(255, 64, 105, .9)','rgba(255, 159, 64, .9)',  'rgba(153, 102, 255,.9 )','rgba(54, 162, 235, .9)'],
+
+  }]
 };
 
 const pieChart = new Chart(pieChartEl, {
-  type: "doughnut",
+  type: 'doughnut',
   data: pieChartData,
   options: {
     responsive: true,
@@ -32,55 +21,59 @@ const pieChart = new Chart(pieChartEl, {
       tooltip: {
         backgroundColor: "#7A7A7A",
         bodyFontColor: "#060A10",
-        borderColor: "#ffffff",
+        borderColor: '#ffffff',
         borderWidth: 1,
         xPadding: 15,
         yPadding: 15,
         displayColors: false,
         caretPadding: 10,
+        
       },
       legend: {
-        position: "right",
+        position: 'right',
         rtl: true,
         labels: {
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 11,
-          },
-        },
-      },
-    },
-  },
+            font: {
+                family: "'Cairo', sans-serif",
+                size: 11
+            }
+        }
+    }
+    }
+  }
 });
 
 // دائنون
 var palette = anychart.palettes.distinctColors();
-var percentage = 21498.25;
+var percentage = 21498.25;  
 
 var label = anychart.standalones.label();
 label
   .useHtml(true)
   .text(
-    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' +
-      percentage.toLocaleString("en-US") +
-      "</span>"
+    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' + 
+    percentage.toLocaleString('en-US') + 
+    '</span>'
   )
-  .position("center")
-  .anchor("center")
-  .hAlign("center")
-  .vAlign("middle");
+  .position('center')
+  .anchor('center')
+  .hAlign('center')
+  .vAlign('middle');
 
 var data = anychart.data.set([
-  ["فورد", percentage],
-  ["اخري", 30498 - percentage],
+  ['فورد', percentage],
+  ['اخري', 30498 - percentage]  
 ]);
 
-palette.items([{ color: "#FF9FB3" }, { color: "#E6E6E6" }]);
+palette.items([
+  { color: '#FF9FB3' },
+  { color: '#E6E6E6' },
+]);
 
 var chart = anychart.pie(data);
 chart.palette(palette);
-chart.innerRadius("70%");
-chart.container("chart-creditor");
+chart.innerRadius('70%');
+chart.container('chart-creditor');
 chart.legend(false);
 chart.labels(false);
 chart.tooltip(false);
@@ -90,40 +83,42 @@ chart.draw();
 // مدينون
 
 var palette = anychart.palettes.distinctColors();
-var percentage = 186.07;
+var percentage = 186.07; 
 var label = anychart.standalones.label();
 label
-  .useHtml(true)
-  .text(
-    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' +
-      percentage.toLocaleString("en-US") +
-      "</span>"
+ .useHtml(true)
+ .text(
+    '<span style="color: #313136; font-weight:700; font-family: Cairo, sans-serif;">' + 
+    percentage.toLocaleString('en-US') + 
+    '</span>'
   )
-  .position("center")
-  .anchor("center")
-  .hAlign("center")
-  .vAlign("middle");
+  .position('center')
+  .anchor('center')
+  .hAlign('center')
+  .vAlign('middle');
 var data = anychart.data.set([
-  ["فورد", percentage],
-  [" اخري", 1500 - percentage],
+  ['فورد', percentage],
+  [' اخري', 1500 - percentage]
 ]);
 
-palette.items([{ color: "#9AD0F4" }, { color: "#E6E6E6" }]);
+palette.items([
+  { color: '#9AD0F4' },
+  { color: '#E6E6E6' },
+]);
 
-var chart = anychart.pie(data);
+var chart = anychart.pie(data)
 chart.palette(palette);
-chart.innerRadius("70%");
-chart.container("chart-debtors");
+chart.innerRadius('70%');
+chart.container('chart-debtors');
 chart.legend(false);
-chart.labels(false);
-chart.tooltip(false);
+chart.labels(false)
+chart.tooltip(false)
 chart.center().content(label);
 chart.draw();
 
-//
+// 
+
 var myChart;
-let lastWidth = window.innerWidth;
-let lastHeight = window.innerHeight;
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
@@ -156,32 +151,49 @@ function createBarChart() {
                     "rgba(75, 192, 192, 1)",
                     "rgba(153, 102, 255, 1)",
                 ],
-                barThickness: isMobile ? 25 : 35
+                barThickness: isMobile ? 25 : 35 // تصغير العمود في الموبايل
             }]
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
-            devicePixelRatio: window.devicePixelRatio || 1,
+            maintainAspectRatio: false, // مهم جداً للأجهزة المحمولة
+            devicePixelRatio: window.devicePixelRatio || 1, // لدعم الشاشات عالية الدقة
             animation: {
                 onComplete: function() {
+                    // إعادة إظهار الرسم
                     setTimeout(() => {
                         chartContainer.style.opacity = '1';
                     }, 100);
                 }
             },
             plugins: {
-                legend: { display: false }
+                legend: {
+                    display: false
+                }
             },
             scales: {
                 x: {
+                    grid: {
+                        display: true
+                    },
                     ticks: {
-                        font: { family: "'Cairo', sans-serif", size: isMobile ? 10 : 11 }
+                        display: true,
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: isMobile ? 10 : 11 
+                        },
                     }
                 },
                 y: {
+                    grid: {
+                        display: true
+                    },
                     beginAtZero: true,
-                    ticks: { font: { size: isMobile ? 10 : 11 } }
+                    ticks: {
+                        font: {
+                            size: isMobile ? 10 : 11
+                        }
+                    }
                 }
             },
             interaction: {
@@ -193,32 +205,27 @@ function createBarChart() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(createBarChart, 100);
+    setTimeout(() => {
+        createBarChart();
+    }, 100);
 });
 
 let resizeTimeout;
 window.addEventListener('resize', function() {
-    if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
-        lastWidth = window.innerWidth;
-        lastHeight = window.innerHeight;
-
-        var chartContainer = document.getElementById("barChart").parentElement;
-        if (chartContainer) {
-            chartContainer.style.transition = 'opacity 0.2s ease-in-out';
-            chartContainer.style.opacity = '0';
-        }
-        
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-            createBarChart();
-        }, 300);
+    var chartContainer = document.getElementById("barChart").parentElement;
+    if (chartContainer) {
+        chartContainer.style.transition = 'opacity 0.2s ease-in-out';
+        chartContainer.style.opacity = '0';
     }
+    
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        createBarChart();
+    }, 300);
 });
 
 window.addEventListener('orientationchange', function() {
     setTimeout(() => {
-        lastWidth = window.innerWidth;
-        lastHeight = window.innerHeight;
         createBarChart();
     }, 500);
 });
