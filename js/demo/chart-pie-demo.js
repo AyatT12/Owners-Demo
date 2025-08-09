@@ -121,8 +121,9 @@ chart.center().content(label);
 chart.draw();
 
 //
-
 var myChart;
+let lastWidth = window.innerWidth;
+let lastHeight = window.innerHeight;
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
@@ -155,7 +156,7 @@ function createBarChart() {
                     "rgba(75, 192, 192, 1)",
                     "rgba(153, 102, 255, 1)",
                 ],
-                barThickness: isMobile ? 25 : 35 // تصغير العمود في الموبايل
+                barThickness: isMobile ? 25 : 35
             }]
         },
         options: {
@@ -164,40 +165,23 @@ function createBarChart() {
             devicePixelRatio: window.devicePixelRatio || 1,
             animation: {
                 onComplete: function() {
-                    // إعادة إظهار الرسم
                     setTimeout(() => {
                         chartContainer.style.opacity = '1';
                     }, 100);
                 }
             },
             plugins: {
-                legend: {
-                    display: false
-                }
+                legend: { display: false }
             },
             scales: {
                 x: {
-                    grid: {
-                        display: true
-                    },
                     ticks: {
-                        display: true,
-                        font: {
-                            family: "'Cairo', sans-serif",
-                            size: isMobile ? 10 : 11 
-                        },
+                        font: { family: "'Cairo', sans-serif", size: isMobile ? 10 : 11 }
                     }
                 },
                 y: {
-                    grid: {
-                        display: true
-                    },
                     beginAtZero: true,
-                    ticks: {
-                        font: {
-                            size: isMobile ? 10 : 11
-                        }
-                    }
+                    ticks: { font: { size: isMobile ? 10 : 11 } }
                 }
             },
             interaction: {
@@ -209,27 +193,32 @@ function createBarChart() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-        createBarChart();
-    }, 100);
+    setTimeout(createBarChart, 100);
 });
 
 let resizeTimeout;
 window.addEventListener('resize', function() {
-    var chartContainer = document.getElementById("barChart").parentElement;
-    if (chartContainer) {
-        chartContainer.style.transition = 'opacity 0.2s ease-in-out';
-        chartContainer.style.opacity = '0';
+    if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+        lastWidth = window.innerWidth;
+        lastHeight = window.innerHeight;
+
+        var chartContainer = document.getElementById("barChart").parentElement;
+        if (chartContainer) {
+            chartContainer.style.transition = 'opacity 0.2s ease-in-out';
+            chartContainer.style.opacity = '0';
+        }
+        
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            createBarChart();
+        }, 300);
     }
-    
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function() {
-        createBarChart();
-    }, 300);
 });
 
 window.addEventListener('orientationchange', function() {
     setTimeout(() => {
+        lastWidth = window.innerWidth;
+        lastHeight = window.innerHeight;
         createBarChart();
     }, 500);
 });
