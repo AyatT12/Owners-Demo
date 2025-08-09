@@ -21,7 +21,6 @@ body {
 
 .sidebar {
     background-color: #ffffff;
-    /* background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%); */
     background-size: cover;
     box-shadow: 0px 8px 8px 4px rgba(255, 159, 64, 0.08), 0px 4px 6px -4px rgba(255, 159, 64, 0.04);
 
@@ -341,7 +340,7 @@ body {
 .layerStyle {
     position: absolute;
     background-color: #333333a8;
-    z-index: 999;
+    z-index: 99;
     height: 100%;
 
 }
@@ -427,11 +426,6 @@ body {
     margin: 10px;
 }
 
-@media (max-width : 500px) {
-    .table-card {
-        padding: 3px;
-    }
-}
 
 /* ////////////////////////////////////////////////employes//////////////////////////////////////////////// */
 .middel-arrow {
@@ -605,13 +599,16 @@ body {
 }
 
 .bars-button #sidebarToggleTop {
+    margin: 10px;
     position: fixed;
-    z-index: 999;
+    z-index: 1;
     background: #e7efedb0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    height: 50px;
+    width: 50px;
 }
 
 .collapse {
@@ -619,7 +616,8 @@ body {
 }
 
 .sidebar-blocks {
-    justify-content: space-between;
+    justify-content: space-around;
+    height: calc(100vh - 60px);
 }
 
 .sidebarToggleDiv {
@@ -630,7 +628,7 @@ body {
     position: sticky;
     top: 0rem;
     display: block !important;
-    height: calc(100vh - 6rem);
+    height: 100vh;
     padding-left: .25rem;
     margin-left: -.25rem;
     overflow-y: auto;
@@ -638,9 +636,6 @@ body {
 }
 
 @media(max-width :767px) {
-    .sidebar>div {
-        justify-content: flex-start !important;
-    }
 
     .sidebar {
         overflow-y: scroll;
@@ -660,20 +655,14 @@ body {
     }
 }
 
-/* loader */
-.tables-row{
-    position: relative;
-    min-height: 450px;
-}
-
 
 /* arrow */
-.arrows{
+.arrows {
     min-width: 22px;
 }
 
 @media (max-width : 1200px) {
-    .data-card-number{
+    .data-card-number {
         font-size: 14px;
     }
 }
