@@ -118,19 +118,10 @@ chart.draw();
 
 // 
 
-var myChart;
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
     var canvas = document.getElementById("barChart");
-    
-    chartContainer.style.opacity = '0';
-    
-    var barChart = canvas.getContext("2d");
-    
-    if (myChart) {
-        myChart.destroy();
-    }
     
     var isMobile = window.innerWidth <= 768;
     var chartHeight = isMobile ? 250 : 300;
@@ -204,9 +195,9 @@ function createBarChart() {
     });
 }
 
+// Initialize chart when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         createBarChart();
     }, 100);
 });
-
