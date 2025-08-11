@@ -117,13 +117,18 @@ chart.center().content(label);
 chart.draw();
 
 // 
+var myChart = null;
+var currentOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
-    var canvas = document.getElementById("barChart");    
-   
+    var canvas = document.getElementById("barChart");
     
-    myChart = new Chart(barChart, {
+    if (myChart) {
+        myChart.destroy();
+    }
+    
+    myChart = new Chart(canvas, {
         type: "bar",
         data: {
             labels: ['نقدًا', 'مدى', 'فيزا', 'امريكن اكسبريس', 'ماستر كارد'],
@@ -141,8 +146,7 @@ function createBarChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
-            devicePixelRatio: window.devicePixelRatio || 1, 
+            maintainAspectRatio: false,
             animation: {
                 onComplete: function() {
                     setTimeout(() => {
@@ -188,13 +192,20 @@ function createBarChart() {
     });
 }
 
-// Initialize chart when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+function checkOrientation() {
+    var newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+    if (newOrientation !== currentOrientation) {
+        currentOrientation = newOrientation;
         createBarChart();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    createBarChart();
 });
 
-window.addEventListener('orientationchange', () => {
-    setTimeout(() => {
-        createBarChart();
-    }, 300); 
+var orientationCheckTimeout;
+window.addEventListener('resize', function() {
+    clearTimeout(orientationCheckTimeout);
+    orientationCheckTimeout = setTimeout(checkOrientation, 200);
 });
