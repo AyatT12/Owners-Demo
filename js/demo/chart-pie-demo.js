@@ -118,10 +118,19 @@ chart.draw();
 
 // 
 
+var myChart;
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
     var canvas = document.getElementById("barChart");
+    
+    chartContainer.style.opacity = '0';
+    
+    var barChart = canvas.getContext("2d");
+    
+    if (myChart) {
+        myChart.destroy();
+    }
     
     var isMobile = window.innerWidth <= 768;
     var chartHeight = isMobile ? 250 : 300;
@@ -147,8 +156,8 @@ function createBarChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
-            devicePixelRatio: window.devicePixelRatio || 1, 
+            maintainAspectRatio: false, // مهم جداً للأجهزة المحمولة
+            devicePixelRatio: window.devicePixelRatio || 1, // لدعم الشاشات عالية الدقة
             animation: {
                 onComplete: function() {
                     // إعادة إظهار الرسم
@@ -195,9 +204,28 @@ function createBarChart() {
     });
 }
 
-// Initialize chart when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         createBarChart();
     }, 100);
+});
+
+let resizeTimeout;
+window.addEventListener('resize', function() {
+    var chartContainer = document.getElementById("barChart").parentElement;
+    if (chartContainer) {
+        chartContainer.style.transition = 'opacity 0.2s ease-in-out';
+        chartContainer.style.opacity = '0';
+    }
+    
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        createBarChart();
+    }, 300);
+});
+
+window.addEventListener('orientationchange', function() {
+    setTimeout(() => {
+        createBarChart();
+    }, 500);
 });
