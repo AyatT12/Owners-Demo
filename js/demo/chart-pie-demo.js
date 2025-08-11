@@ -118,7 +118,6 @@ chart.draw();
 
 // 
 var myChart = null;
-var currentOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
 
 function createBarChart() {
     var chartContainer = document.getElementById("barChart").parentElement;
@@ -192,20 +191,22 @@ function createBarChart() {
     });
 }
 
-function checkOrientation() {
-    var newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-    if (newOrientation !== currentOrientation) {
-        currentOrientation = newOrientation;
-        createBarChart();
-    }
+function debounce(func, timeout = 100){
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
 }
+
+const handleResize = debounce(() => {
+    if (myChart) {
+        myChart.resize();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     createBarChart();
-});
-
-var orientationCheckTimeout;
-window.addEventListener('resize', function() {
-    clearTimeout(orientationCheckTimeout);
-    orientationCheckTimeout = setTimeout(checkOrientation, 200);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
 });
