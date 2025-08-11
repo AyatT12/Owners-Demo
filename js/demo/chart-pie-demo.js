@@ -118,50 +118,83 @@ chart.draw();
 
 // 
 
-const ctx = document.getElementById('barChart');
-
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['نقدًا', 'مدى', 'فيزا', 'امريكن اكسبريس', 'ماستر كارد'],
-        datasets: [{
-            data: [250000, 20000, 5000, 4500, 4000],
-            backgroundColor: [
-                "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(75, 192, 192, 1)",
-                "rgba(153, 102, 255, 1)",
-            ],
-            barThickness: 35
-        }]
-    },
-    options: {
-        responsive: true, 
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                beginAtZero: true
-            },
-            x: {
-                ticks: {
-                    font: {
-                        family: "'Cairo', sans-serif",
-                    },
+function createBarChart() {
+    var chartContainer = document.getElementById("barChart").parentElement;
+    var canvas = document.getElementById("barChart");    
+   
+    
+    myChart = new Chart(barChart, {
+        type: "bar",
+        data: {
+            labels: ['نقدًا', 'مدى', 'فيزا', 'امريكن اكسبريس', 'ماستر كارد'],
+            datasets: [{
+                data: [250000, 20000, 5000, 4500, 4000],
+                backgroundColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                ],
+                barThickness: 35 
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, 
+            devicePixelRatio: window.devicePixelRatio || 1, 
+            animation: {
+                onComplete: function() {
+                    setTimeout(() => {
+                        chartContainer.style.opacity = '1';
+                    }, 100);
                 }
             },
-        },
-        plugins: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: true
+                    },
+                    ticks: {
+                        display: true,
+                        font: {
+                            family: "'Cairo', sans-serif",
+                            size: 11 
+                        },
+                    }
+                },
+                y: {
+                    grid: {
+                        display: true
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 11
+                        }
+                    }
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index'
             }
-        },
-    }
-});
+        }
+    });
+}
 
+// Initialize chart when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+        createBarChart();
+});
 
 window.addEventListener('orientationchange', () => {
     setTimeout(() => {
-        myChart.resize();
+        createBarChart();
     }, 300); 
 });
