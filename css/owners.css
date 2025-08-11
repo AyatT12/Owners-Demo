@@ -666,7 +666,7 @@ body {
         font-size: 14px;
     }
 }
-@media (max-width:1024px) {
+@media (max-width:1440px) {
     .sidebar-blocks {
         justify-content: space-around;
         height: calc(100vh - 100px);

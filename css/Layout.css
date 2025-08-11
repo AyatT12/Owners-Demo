@@ -578,12 +578,6 @@ a:focus {
     flex: 1;
 }
 
-.sidebar-blocks > div:first-child {
-   
-    padding-top: 1rem;
-    overflow-y: auto;
-    min-height: 0;
-}
 
 .sidebar-blocks > div:last-child {
     flex-shrink: 0;
@@ -922,7 +916,7 @@ a:focus {
         display: block;
         width: 100%;
         text-align: left;
-        padding: 1rem;
+        padding: .6rem;
         width: 14rem
     }
 
