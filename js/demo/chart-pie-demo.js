@@ -118,114 +118,50 @@ chart.draw();
 
 // 
 
-var myChart;
+const ctx = document.getElementById('barChart');
 
-function createBarChart() {
-    var chartContainer = document.getElementById("barChart").parentElement;
-    var canvas = document.getElementById("barChart");
-    
-    chartContainer.style.opacity = '0';
-    
-    var barChart = canvas.getContext("2d");
-    
-    if (myChart) {
-        myChart.destroy();
-    }
-    
-    var isMobile = window.innerWidth <= 768;
-    var chartHeight = isMobile ? 250 : 300;
-    
-    canvas.style.width = '100%';
-    canvas.style.height = chartHeight + 'px';
-    
-    myChart = new Chart(barChart, {
-        type: "bar",
-        data: {
-            labels: ['نقدًا', 'مدى', 'فيزا', 'امريكن اكسبريس', 'ماستر كارد'],
-            datasets: [{
-                data: [250000, 20000, 5000, 4500, 4000],
-                backgroundColor: [
-                    "rgba(255, 99, 132, 1)",
-                    "rgba(54, 162, 235, 1)",
-                    "rgba(255, 206, 86, 1)",
-                    "rgba(75, 192, 192, 1)",
-                    "rgba(153, 102, 255, 1)",
-                ],
-                barThickness: isMobile ? 25 : 35 // تصغير العمود في الموبايل
-            }]
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['نقدًا', 'مدى', 'فيزا', 'امريكن اكسبريس', 'ماستر كارد'],
+        datasets: [{
+            data: [250000, 20000, 5000, 4500, 4000],
+            backgroundColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+            ],
+            barThickness: 35
+        }]
+    },
+    options: {
+        responsive: true, 
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    font: {
+                        family: "'Cairo', sans-serif",
+                    },
+                }
+            },
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, // مهم جداً للأجهزة المحمولة
-            devicePixelRatio: window.devicePixelRatio || 1, // لدعم الشاشات عالية الدقة
-            animation: {
-                onComplete: function() {
-                    // إعادة إظهار الرسم
-                    setTimeout(() => {
-                        chartContainer.style.opacity = '1';
-                    }, 100);
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            scales: {
-                x: {
-                    grid: {
-                        display: true
-                    },
-                    ticks: {
-                        display: true,
-                        font: {
-                            family: "'Cairo', sans-serif",
-                            size: isMobile ? 10 : 11 
-                        },
-                    }
-                },
-                y: {
-                    grid: {
-                        display: true
-                    },
-                    beginAtZero: true,
-                    ticks: {
-                        font: {
-                            size: isMobile ? 10 : 11
-                        }
-                    }
-                }
-            },
-            interaction: {
-                intersect: false,
-                mode: 'index'
+        plugins: {
+            legend: {
+                display: false
             }
-        }
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-        createBarChart();
-    }, 100);
-});
-
-let resizeTimeout;
-window.addEventListener('resize', function() {
-    var chartContainer = document.getElementById("barChart").parentElement;
-    if (chartContainer) {
-        chartContainer.style.transition = 'opacity 0.2s ease-in-out';
-        chartContainer.style.opacity = '0';
+        },
     }
-    
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function() {
-        createBarChart();
-    }, 300);
 });
 
-window.addEventListener('orientationchange', function() {
+
+window.addEventListener('orientationchange', () => {
     setTimeout(() => {
-        createBarChart();
-    }, 500);
+        myChart.resize();
+    }, 300); 
 });
