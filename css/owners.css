@@ -672,3 +672,14 @@ body {
         height: calc(100vh - 100px);
     }    
 }
+ .card-header h5{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: .5rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+.chart-title{
+    min-height: 50px;
+}
