@@ -668,9 +668,12 @@ body {
 }
 @media (max-width:1440px) {
     .sidebar-blocks {
-        justify-content: space-around;
+        justify-content: flex-start;
         height: calc(100vh - 100px);
     }    
+    .scrollTable{
+         height: 40vh;
+    }
 }
  .card-header h5{
     font-size: 18px;
