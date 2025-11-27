@@ -15,26 +15,6 @@
 ::before {
     box-sizing: border-box
 }
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent
-}
-
-
-body {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #858796;
-    text-align: left;
-    background-color: #FEFCFB;
-}
-
-
 progress {
     vertical-align: baseline
 }
@@ -105,7 +85,7 @@ progress {
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: .7rem 
+    padding: .7rem .7rem .2rem; 
 }
 
 .card-title {
@@ -130,7 +110,7 @@ progress {
 }
 
 .card-header {
-    padding: .75rem 1.25rem;
+    padding: .75rem .5rem;
     margin-bottom: 0;
     background-color: #ffffff;
     border-bottom: 1px solid #ffff
@@ -1288,6 +1268,7 @@ text-align: start;
 @media (min-width:767px){
     .topbar {
         height: 0rem;
+        padding: 2px;
     }
     
 }

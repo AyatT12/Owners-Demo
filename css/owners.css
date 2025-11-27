@@ -168,7 +168,7 @@ body {
 
 .card-hr {
     border-color: #5c5b5b;
-    margin: .5rem;
+    margin: .2rem;
 }
 
 .pie-chartData {
@@ -296,7 +296,7 @@ body {
 }
 
 .scrollTable {
-    height: 45vh;
+    height: 51vh;
     overflow: auto;
     min-height: 300px;
 }
@@ -510,6 +510,7 @@ body {
 /* //////////////////////////////////////////////////tenants/////////////////////////////////////////////////////// */
 .progress-rate {
     text-align: end;
+    margin-bottom: 0;
 }
 
 .progress-bar {
@@ -682,14 +683,17 @@ body {
     min-height: 40px;
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
-.chart-title{
+@media (min-width:1200px) {
+    .chart-title{
     min-height: 50px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
 }
 @media (max-width:1024px){
   .Data_value_address{
